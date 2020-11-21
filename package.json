@@ -1,5 +1,5 @@
 {
-  "name": "file-saver",
+  "name": "file-saver-es",
   "version": "2.0.5",
   "description": "An HTML5 saveAs() FileSaver implementation",
   "main": "dist/FileSaver.min.js",

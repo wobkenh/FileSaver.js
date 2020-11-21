@@ -93,7 +93,7 @@
   // https://www.whatismybrowser.com/guides/the-latest-user-agent/macos
 
 
-  var isMacOSWebView = /Macintosh/.test(navigator.userAgent) && /AppleWebKit/.test(navigator.userAgent) && !/Safari/.test(navigator.userAgent);
+  var isMacOSWebView = _global.navigator && /Macintosh/.test(navigator.userAgent) && /AppleWebKit/.test(navigator.userAgent) && !/Safari/.test(navigator.userAgent);
   var saveAs = _global.saveAs || ( // probably in some web worker
   typeof window !== 'object' || window !== _global ? function saveAs() {}
   /* noop */
@@ -187,8 +187,4 @@
   });
   _exports.saveAs = saveAs;
   _global.saveAs = saveAs.saveAs = saveAs;
-
-  if (typeof module !== 'undefined') {
-    module.exports = saveAs;
-  }
 });
